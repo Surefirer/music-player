@@ -1,4 +1,5 @@
-//import "./style/app.css";
+//import style
+import "./style/app.css";
 
 //adding components
 import Player from "./components/Player";
