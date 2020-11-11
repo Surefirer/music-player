@@ -5,6 +5,7 @@ import "./style/app.css";
 import Player from "./components/Player";
 import Song from "./components/Song";
 import Library from "./components/Library";
+import Nav from "./components/Nav";
 //import util
 import data from "./util";
 
@@ -18,6 +19,7 @@ function App() {
     currentTime: 0,
     duration: 0,
   });
+  const [sideBarOpen, setSideBarOpen] = useState(false);
 
   const timeUpdateHandler = (e) => {
     const current = e.target.currentTime;
@@ -27,6 +29,7 @@ function App() {
 
   return (
     <div className="App">
+      <Nav sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen} />
       <Song currentSong={currentSong} />
       <Player
         isPlaying={isPlaying}
@@ -42,6 +45,7 @@ function App() {
         audioRef={audioRef}
         isPlaying={isPlaying}
         setSong={setSong}
+        sideBarOpen={sideBarOpen}
       />
       <audio
         onTimeUpdate={timeUpdateHandler}
