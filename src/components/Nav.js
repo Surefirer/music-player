@@ -6,6 +6,7 @@ const Nav = ({ sideBarOpen, setSideBarOpen }) => {
   const sideBarOpenHandler = () => {
     return setSideBarOpen(!sideBarOpen);
   };
+
   return (
     <nav>
       <h1>Waves</h1>
