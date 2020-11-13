@@ -1,4 +1,4 @@
-## Live Demo: [https://music-player-waves134985.netlify.app/]
+## Live Demo: https://music-player-waves134985.netlify.app/
 
 # Getting Started with Create React App
 
