@@ -46,7 +46,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className={`App ${sideBarOpen ? "library-active" : ""}`}>
       <Nav sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen} />
       <Song currentSong={currentSong} />
       <Player

@@ -21,6 +21,15 @@ h4 {
   color: #646464;
 }
 
+.App {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.library-active {
+  margin-left: 30%;
+}
+
 .song-container {
   min-height: 60vh;
   display: -webkit-box;
@@ -49,6 +58,12 @@ h4 {
 
 .song-container h3 {
   font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .song-container img {
+    width: 60%;
+  }
 }
 
 .player {
@@ -116,6 +131,12 @@ input[type="range"]::-webkit-slider-thumb {
   width: 16px;
 }
 
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+}
+
 .track {
   background: #9292e9;
   width: 100%;
@@ -137,6 +158,15 @@ input[type="range"]::-webkit-slider-thumb {
   pointer-events: none;
 }
 
+@media screen and (max-width: 768px) {
+  .time-control {
+    width: 90%;
+  }
+  .play-control {
+    width: 60%;
+  }
+}
+
 .library {
   position: fixed;
   top: 0;
@@ -146,6 +176,7 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-box-shadow: 2px 2px 20px #dddcdc;
           box-shadow: 2px 2px 20px #dddcdc;
   overflow: scroll;
+  background: white;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: all 0.5s ease;
@@ -166,6 +197,8 @@ input[type="range"]::-webkit-slider-thumb {
           align-items: center;
   padding: 1rem 2rem;
   cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .library-song img {
@@ -218,6 +251,12 @@ input[type="range"]::-webkit-slider-thumb {
   opacity: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
+}
+
 nav {
   min-height: 10vh;
   display: -webkit-box;
@@ -248,5 +287,11 @@ nav button:focus {
 nav button:hover {
   background: #414141;
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  nav button {
+    z-index: 10;
+  }
 }
 /*# sourceMappingURL=app.css.map */
